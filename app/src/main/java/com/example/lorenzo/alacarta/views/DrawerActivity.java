@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -30,6 +31,7 @@ import java.util.List;
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String TAG = "DrawerActivity";
     private List<Restaurante> restoList = new ArrayList<>();
     private ListView mListView;
     private RestoAdapter mAdapter;
@@ -154,11 +156,13 @@ public class DrawerActivity extends AppCompatActivity
 
         if (id == R.id.nav_profile) {
             Intent profileIntent = new Intent(this, ProfileActivity.class);
+            Log.d(TAG, "onNavigationItemSelected: " + "intent 1");
             startActivity(profileIntent);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_favourites) {
             Intent favIntent = new Intent(this, FavouriteActivity.class);
+            Log.d(TAG, "onNavigationItemSelected: " + "intent 2");
             startActivity(favIntent);
         } else if (id == R.id.nav_logout) {
             logout();

@@ -12,7 +12,7 @@ public class FavouriteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_favourite);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.backButton);
         fab.setOnClickListener(new View.OnClickListener() {
